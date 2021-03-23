@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+
+[sshd]
+port = {{ ssh_port }}
+
+[dropbear]
+port = {{ ssh_port }}
+
+[selinux-ssh]
+port = {{ ssh_port }}
+
