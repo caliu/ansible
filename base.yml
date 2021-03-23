@@ -1,0 +1,5 @@
+---
+- name: Role which applies to all hosts
+  hosts: all
+  roles:
+    - { role: base, become: yes }

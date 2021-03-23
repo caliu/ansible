@@ -1,0 +1,11 @@
+---
+debian_sections:
+  - main
+  - contrib
+  - non-free
+debian_security_sections:
+  - main
+debian_updates_sections:
+  - main
+debian_release: stretch
+debian_mirror: http://ftp.es.debian.org/debian/

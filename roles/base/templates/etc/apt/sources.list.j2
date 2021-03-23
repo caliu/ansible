@@ -1,0 +1,10 @@
+# Ansible managed
+deb {{ debian_mirror }} {{ debian_release }} {{ debian_sections|join(' ') }}
+deb-src {{ debian_mirror }} {{ debian_release }} {{ debian_sections|join(' ') }}
+
+deb http://security.debian.org/debian-security {{ debian_release }}/updates {{ debian_security_sections|join(' ') }}
+deb-src http://security.debian.org/debian-security {{ debian_release }}/updates {{ debian_security_sections|join(' ') }}
+
+# stretch-updates, previously known as 'volatile'
+deb {{ debian_mirror }} {{ debian_release}}-updates {{ debian_updates_sections|join(' ') }}
+deb-src {{ debian_mirror }} {{ debian_release}}-updates {{ debian_updates_sections|join(' ') }}
