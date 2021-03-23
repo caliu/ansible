@@ -7,5 +7,5 @@ debian_security_sections:
   - main
 debian_updates_sections:
   - main
-debian_release: stretch
+debian_release: buster
 debian_mirror: http://ftp.es.debian.org/debian/
