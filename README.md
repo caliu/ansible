@@ -49,3 +49,9 @@ de treball del repositori.
   compartir l'estat de la configuració amb la resta de l'equip.
 * Comenteu els canvis que puguin generar controvèrsia amb l'equip dels
   masovers o mitjançant propostes de canvi.
+
+## Agraïments
+
+Aquest repositori està inspirat en el del servei alioth-lists.debian.net,
+disponible al [salsa](https://salsa.debian.org/alioth-lists-team/ansible)
+de Debian.
