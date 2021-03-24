@@ -8,5 +8,6 @@
       - sudo
       - fail2ban
       - aptitude
+      - colordiff
 - template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
 - template: src=etc/fail2ban/jail.local.j2 dest=/etc/fail2ban/jail.local mode=0644 owner=root group=root
