@@ -38,6 +38,10 @@ de treball del repositori.
 
     $ ansible-playbook site.yml --ask-become-pass
 
+*   Evitar que es mostri les vaques:
+
+    $ export ANSIBLE_NOCOWS=1
+
 ## Recomanacions i bones pràctiques
 
 * En general és preferible no fer canvis directament a la configuració
