@@ -1,0 +1,2 @@
+---
+- template: src=etc/sysctl.d/nginx.conf.j2 dest=/etc/sysctl.d/nginx.conf mode=0644 owner=root group=root
