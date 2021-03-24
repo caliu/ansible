@@ -18,6 +18,31 @@ especialitzats en fer les tasques necessàries. Per tant, us caldrà
 utilitzar l'ansible des d'un lloc on tingueu la clau privada que us
 doni accés al servidor corresponent.
 
+## Gestió de secrets
+
+El mecanisme per gestió de secrets és ansible-vault. Abans de començar
+necessitareu crear un fitxer de text (`secrets.enc`) amb el format
+següent per indicar la vostra contrasenya al servidor remot i així
+poder executar el sudo:
+
+```
+---
+server1_pass: "foo"
+server2_pass: "bar"
+```
+
+Tot seguit haureu de xifrar aquest fitxer amb una contrasenya personal:
+
+```
+$ ansible-vault encrypt secrets.enc
+New Vault password: 
+Confirm New Vault password: 
+Encryption successful
+```
+
+Fixeu-vos que els fitxers `*.enc` no s'inclouran al repositori per tant
+aquest fitxer xifrat romandrà només al vostre ordinador.
+
 ## Organització dels playbooks
 
 El fitxer `site.yml` hauria de contenir les referències a tots els rols
@@ -32,11 +57,11 @@ de treball del repositori.
 
 *   Mostrar els canvis que s'executarien pels playbooks del repositori:
 
-    $ ansible-playbook site.yml --check --diff --ask-become-pass
+    $ ansible-playbook site.yml --check --diff --ask-vault-pass -e @secrets.enc
 
 *   Aplicar els canvis de veritat:
 
-    $ ansible-playbook site.yml --ask-become-pass
+    $ ansible-playbook site.yml --ask-vault-pass -e @secrets.enc
 
 *   Evitar que es mostri les vaques:
 
