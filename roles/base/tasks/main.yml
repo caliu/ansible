@@ -8,6 +8,7 @@
       - sudo
       - fail2ban
       - rsync
+      - needrestart
       - aptitude
       - colordiff
 - template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
