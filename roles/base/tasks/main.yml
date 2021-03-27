@@ -7,6 +7,7 @@
       - etckeeper
       - sudo
       - fail2ban
+      - rsync
       - aptitude
       - colordiff
 - template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
