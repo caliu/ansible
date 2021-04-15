@@ -30,6 +30,10 @@ d'altres mitjançant el directori `meta`.
 En tots els casos, l'ansible s'executa directament sobre el directori
 de treball del repositori.
 
+*   Comprovar que funciona la connexió amb els servidors:
+
+    $ ansible -m ping all
+
 *   Mostrar els canvis que s'executarien pels playbooks del repositori:
 
     $ ansible-playbook site.yml --check --diff --ask-become-pass
