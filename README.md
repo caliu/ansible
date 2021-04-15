@@ -46,6 +46,22 @@ de treball del repositori.
 
     $ export ANSIBLE_NOCOWS=1
 
+## Gestió de dades sensibles
+
+Per evitar que algunes dades sensibles es publiquin al repositori es
+proposa utilitzar _custom facts_ al servidor principal, que estan
+localitzats dins el directori `/etc/ansible/facts.d`. Podeu llegir-ne
+tots els detalls a la [documentació oficial](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html#local-facts).
+
+Tingueu en compte  que els vostres usuaris han de poder llegir o
+executar els fitxers corresponents d'aquest directori per tal que
+funcioni correctament, però també cal evitar que qualsevol altre usuari
+hi pugui accedir.
+
+Per obtenir els _custom facts_ actuals podeu fer això:
+
+    $ ansible -m setup -a filter=ansible_local larry.caliu.cat
+
 ## Recomanacions i bones pràctiques
 
 * En general és preferible no fer canvis directament a la configuració
