@@ -1,0 +1,5 @@
+---
+- name: Masovers role applies to all hosts
+  hosts: all
+  roles:
+    - { role: masovers, become: yes }
