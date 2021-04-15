@@ -1,3 +1,0 @@
----
-- name: "sudoers masovers"
-  template: src=etc/sudoers.d/template.j2 dest=/etc/sudoers.d/masovers mode=0400 owner=root group=root

@@ -1,0 +1,3 @@
+{% for line in hostvars['larry.caliu.cat']['ansible_facts']['ansible_local']['sudoers'][item] %}
+{{ line }}
+{% endfor %}
