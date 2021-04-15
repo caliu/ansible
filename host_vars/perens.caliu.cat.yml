@@ -1,5 +1,4 @@
 ---
 ssh_port: 2250
-sudoers_d_list:
-  - masovers
+sudoers_d_extra:
   - ubuntaires

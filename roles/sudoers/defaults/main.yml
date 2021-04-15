@@ -1,3 +1,4 @@
 ---
-sudoers_d_list:
+sudoers_d_common:
   - masovers
+sudoers_d_extra: []
