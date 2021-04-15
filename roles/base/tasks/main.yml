@@ -14,7 +14,5 @@
       - needrestart
       - aptitude
       - colordiff
-- name: "Default sudoers"
-  template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
 - name: "fail2ban local jail"
   template: src=etc/fail2ban/jail.local.j2 dest=/etc/fail2ban/jail.local mode=0644 owner=root group=root
