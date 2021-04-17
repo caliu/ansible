@@ -1,0 +1,12 @@
+---
+- name: "Install sudo"
+  apt:
+    pkg:
+      - sudo
+- name: "Default sudoers"
+  template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
+- name: "sudoers.d contents"
+  template: src=etc/sudoers.d/template.j2 dest=/etc/sudoers.d/{{ item }} mode=0400 owner=root group=root
+  with_items:
+  - "{{ sudoers_d_common }}"
+  - "{{ sudoers_d_extra }}"

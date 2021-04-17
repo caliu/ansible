@@ -1,20 +1,12 @@
 ---
-- name: "APT sources"
-  template: src=etc/apt/sources.list.j2 dest=/etc/apt/sources.list
-  notify:
-    - apt-get update
-- name: "Installed packages"
+- name: "Install base packages"
   apt:
     pkg:
-      - etckeeper
-      - sudo
       - fail2ban
       - logwatch
       - rsync
       - needrestart
       - aptitude
       - colordiff
-- name: "Default sudoers"
-  template: src=etc/sudoers.j2 dest=/etc/sudoers mode=0440 owner=root group=root
 - name: "fail2ban local jail"
   template: src=etc/fail2ban/jail.local.j2 dest=/etc/fail2ban/jail.local mode=0644 owner=root group=root
