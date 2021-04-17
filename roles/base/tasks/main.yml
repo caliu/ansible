@@ -7,7 +7,6 @@
   apt:
     pkg:
       - etckeeper
-      - sudo
       - fail2ban
       - logwatch
       - rsync
