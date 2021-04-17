@@ -1,5 +1,0 @@
----
-- name: Sudoers role applies to all hosts
-  hosts: all
-  roles:
-    - { role: sudoers, become: yes }
