@@ -1,12 +1,7 @@
 ---
-- name: "APT sources"
-  template: src=etc/apt/sources.list.j2 dest=/etc/apt/sources.list
-  notify:
-    - apt-get update
-- name: "Installed packages"
+- name: "Install base packages"
   apt:
     pkg:
-      - etckeeper
       - fail2ban
       - logwatch
       - rsync
