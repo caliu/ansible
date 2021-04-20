@@ -35,13 +35,6 @@ redirecciona() {
 # afegir el case de cada equip, i a dins una linia per cada servei.
 #     redirecciona  <host_port> <guest_address> <guest_port>
 case "$Guest_name" in
-    lessig)
-        redirecciona 2210 192.168.122.10 2210
-        #redirecciona   80 192.168.122.10   80
-        #redirecciona  443 192.168.122.10  443
-        #redirecciona 4443 192.168.122.10 4443
-        ;;
-
     poettering)
 	redirecciona 2290 192.168.122.149 2290
 	;;
