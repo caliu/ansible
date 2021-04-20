@@ -41,14 +41,14 @@ case "$Guest_name" in
 	;;
 
     nelson)
-	redirecciona 2230 192.168.122.241 2230
+	redirecciona {{ hostvars['nelson.caliu.cat']['ssh_port'] }} 192.168.122.241 {{ hostvars['nelson.caliu.cat']['ssh_port'] }}
 	;;
 
     oberg)
 	;;
 
     perens)
-	redirecciona 2250 192.168.122.239 2250
+	redirecciona {{ hostvars['perens.caliu.cat']['ssh_port'] }} 192.168.122.239 {{ hostvars['perens.caliu.cat']['ssh_port'] }}
 	;;
 
 esac
