@@ -1,0 +1,5 @@
+---
+- name: Libvirt role
+  hosts: larry.caliu.cat
+  roles:
+    - { role: libvirt, become: yes }
