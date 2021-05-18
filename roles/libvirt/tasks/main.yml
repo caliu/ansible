@@ -1,0 +1,7 @@
+---
+- name: "Install libvirt packages"
+  apt:
+    pkg:
+      - libvirt-daemon-system
+- name: "libvirt port forwarding via iptables"
+  template: src=etc/libvirt/hooks/qemu.j2 dest=/etc/libvirt/hooks/qemu mode=0755 owner=root group=root
